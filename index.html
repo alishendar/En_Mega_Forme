@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker
+                .register("service-worker.js")
+                .then(function (registration) {
+                    console.info("Service Worker enregistré avec succès :", registration);
+
+                    // Wait for the service worker to take control
+                    if (navigator.serviceWorker.controller) {
+                        console.log("Service Worker est le contrôleur");
+                        initOfflineInfo();
+                    } else {
+                        navigator.serviceWorker.addEventListener('controllerchange', function() {
+                            console.log("Service Worker a pris le contrôle");
+                            initOfflineInfo();
+                        });
+                    }
+                })
+                .catch(function (error) {
+                    console.info("Échec de l'enregistrement du Service Worker :", error);
+                });
+        }
+
+        function initOfflineInfo() {
+            // Your existing offlineInfo.js code can be moved here
+            $(document).ready(function () {
+                if ("serviceWorker" in navigator) {
+                    navigator.serviceWorker.ready
+                        .then(function (registration) {
+                            // Access the service worker instance
+                            var serviceWorker =
+                                registration.active ||
+                                registration.waiting ||
+                                registration.installing;
+
+                            // Check if the service worker is available
+                            if (serviceWorker) {
+                                // Post a message to the service worker
+                                serviceWorker.postMessage({ type: "offlinePopup" });
+                            }
+                        })
+                        .catch(function (error) {
+                            console.error("Error getting service worker registration:", error);
+                        });
+                }
+            });
+        }
+    </script>
+
+    <title>EMF</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <!--chargement de SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <link rel="stylesheet" href="./client/css/style.css">
+
+    <script src="./client/js/wrk/serviceHttp.js"></script>
+    <script src="./client/js/ctrl/appCtrl.js"></script>
+    <script src="./client/js/ctrl/menu.js"></script>
+    <script src="./client/js/ctrl/indexCtrl.js"></script>
+    <script src="./client/js/ihm/loginCtrl.js"></script>
+    <script src="./client/js/ihm/userList.js"></script>
+    <script src="./client/js/ihm/genratorSession.js"></script>
+    <script src="./client/js/ihm/copySession.js"></script>
+    <script src="./client/js/ihm/myListSession.js"></script>
+    <script src="./client/js/ihm/updateSession.js"></script>
+    <script src="./client/js/ihm/startSession.js"></script>
+    <script src="client/js/ctrl/offlineInfo.js"></script>
+    <link rel="manifest" href="manifest.json" />
+    <script src="client/js/ctrl/notificationCtrl.js"></script>
+
+</head>
+<body>
+<div id="menu"></div>
+<div id="content"></div>
+</body>
+</html>

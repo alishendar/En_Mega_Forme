@@ -1,0 +1,64 @@
+.navbar-brand {
+    width: 10%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.logo {
+    width: 60%;
+}
+
+.logoLogin {
+    width: 25%;
+    margin-left: 37%;
+}
+
+.loginForme {
+    width: 50%;
+    margin-left: 25%;
+}
+
+#addUser {
+    margin: 3% 0%;
+}
+
+.inputListUser {
+    width: 50%;
+}
+
+.droplist {
+    margin: 1%;
+}
+
+.nbrExercises {
+    width: 50%;
+}
+
+.timePicker {
+    margin: 2%;
+}
+
+.btnModify {
+    margin: 1%;
+}
+
+.nextExerciceName {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.timerPause {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#infoCache {
+    height: 100%;
+    width: 50%;
+    color: red !important;
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}

@@ -1,0 +1,81 @@
+<div class="card">
+    <div class="container mt-5">
+        <div class="row mb-3">
+            <h1 id="sessionName"></h1>
+
+            <div class="col-md-10">
+                <div id="dropdownContainerUser" class="m-3"></div>
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="button" id="addUserToSession" class="btn btn-primary btn-sm"><span
+                        class="bi-plus-square-fill"></span>&nbsp;Ajoute
+                </button>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-10">
+                <div id="dropdownContainerMuscle" class="m-3"></div>
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="button" id="addMuscleToSession" class="btn btn-primary btn-sm"><span
+                        class="bi-plus-square-fill"></span>&nbsp;Ajoute
+                </button>
+            </div>
+        </div>
+        <div class="mb-3">
+
+            <div id="timepicker" class="time-picker">
+                <table>
+                    <tr>
+                        <td>
+                            <label class="form-label timePicker">Temps de travail</label>
+                        </td>
+                        <td>
+                            <span id="selectedWorkMinutes">MM</span>
+                            <select id="workMinutes" name="MM" class="form-select minuteInput"></select>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <span id="selectedWorkSeconds">SS</span>
+                            <select id="workSeconds" name="SS" class="form-select secoundInput">
+                                <!-- Options for seconds will be added by JavaScript -->
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="mb-3">
+
+            <table>
+                <tr>
+                    <td>
+                        <label class="form-label timePicker">Temps de Pause</label>
+                    </td>
+                    <td>
+                        <span id="selectedRestMinutes">MM</span>
+                        <select id="restMinutes" name="MM" class="form-select minuteInput">
+
+
+                        </select>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <span id="selecteRestSeconds">SS</span>
+                        <select id="restSeconds" name="SS" class="form-select secoundInput">
+                            <!-- Options for seconds will be added by JavaScript -->
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nombre d'exercices</label>
+            <input type="number" class="form-control nbrExercises" id="nbrExercises" placeholder="Nombre d'exercices">
+        </div>
+        <button id="generate" class="btn btn-primary">Générer</button>
+        <button id="updateSession" class="btn btn-primary">Mettre à jour</button>
+    </div>
+</div>

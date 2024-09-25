@@ -1,0 +1,22 @@
+{
+	"name": "En Méga Forme",
+	"short_name": "EMF",
+	"description": "En Méga Forme ",
+	"start_url": "index.html?fullscreen=true",
+	"background_color": "#ffffff",
+	"display": "fullscreen",
+	"theme_color": "#000000",
+	"orientation": ["portrait", "landscape"],
+	"icons": [
+		{
+			"src": "./img/logo.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "./img/logo.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	]
+}

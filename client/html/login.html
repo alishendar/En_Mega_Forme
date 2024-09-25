@@ -1,0 +1,43 @@
+<!--
+	login.html
+
+    Description :
+    Vue html qui affiche le formulaire de connexion.
+
+    Auteur : Shendar Ali
+    Date : 06.05.2024
+    Version : 2.0
+
+    Modifications :
+    [Liste des modifications avec dates et descriptions]
+-->
+
+<div class="card">
+	<div class="card-body">
+		<h1 class="card-title text-center">Formulaire de connexion</h1>
+		<img class="logoLogin" src="./img/logo.png">
+		<form class="loginForme">
+			<div class="mb-3">
+				<label for="username" class="form-label">Nom d'utilisateur</label>
+				<input
+					type="text"
+					class="form-control"
+					id="username"
+					placeholder="Nom d'utilisateur"
+				/>
+			</div>
+			<div class="mb-3">
+				<label for="mdp" class="form-label">Mot de Passe</label>
+				<input type="password" class="form-control" id="mdp" />
+			</div>
+			<div class="mb-3 text-center">
+				<input
+					id="connexion"
+					type="button"
+					class="btn btn-primary"
+					value="Se connecter"
+				/>
+			</div>
+		</form>
+	</div>
+</div>
