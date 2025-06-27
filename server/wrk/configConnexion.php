@@ -19,8 +19,8 @@ define('DB_TYPE', 'mysql');
 // le même  serveur on peut laisser local host
 define('DB_HOST', 'localhost');
 // le nom de la base de données
-define('DB_NAME', 'alis_en_Mega_forme');
+define('DB_NAME', '');
 //le username pour ce connecter
-define('DB_USER', 'alis_admin_EMF');
+define('DB_USER', '');
 // password de utilisateur
-define('DB_PASS', '750379$Ziro');
+define('DB_PASS', '');
